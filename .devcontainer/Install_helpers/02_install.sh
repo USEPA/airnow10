@@ -11,8 +11,8 @@ printf '\033[31m use Drupal9\033[0m\n'
 echo ''
 
 cd airnowgov9
-ddev config --project-name=airnowgov9 \
-  --project-type=drupal9 \
+ddev config --project-name=airnowgov10 \
+  --project-type=drupal10 \
   --php-version=8.2 \
 
 ddev composer config audit.block-insecure false
@@ -29,4 +29,4 @@ echo ''
 printf 'Now add your \033[31mPantheon\033[0m machine token to the \033[31m/airnowgov9/.ddev/config.yaml\033[0m file on Line 15\n'
 echo ''
 
-code /workspaces/airnow/airnowgov9/.ddev/config.yaml
+code /workspaces/airnow/airnowgov10/.ddev/config.yaml
