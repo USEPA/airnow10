@@ -19,11 +19,10 @@ ddev composer config audit.block-insecure false
 ddev composer require drush/drush:^12 --with-all-dependencies
 
 # Make some changes to the config.yaml file cw 2026-03-02
-sed -i 's/php_version: "8\.1"/php_version: "8.2"/' /workspaces/airnow10/airnowgov10/.ddev/config.yaml
 sed -i '/^web_environment: \[\]$/c\web_environment:\
     - TERMINUS_MACHINE_TOKEN=<your_token>\
-    - PANTHEON_SITE=airnowgov10\
-    - PANTHEON_ENVIRONMENT=dev' /workspaces/airnow10/airnowgov10/.ddev/config.yaml
+    -  DDEV_PANTHEON_SITE=airnowgov10\
+    -  DDEV_PANTHEON_ENVIRONMENT=dev' /workspaces/airnow10/airnowgov10/.ddev/config.yaml
 
 echo ''
 printf 'Now add your \033[31mPantheon\033[0m machine token to the \033[31m/airnowgov10/.ddev/config.yaml\033[0m file on Line 15\n'
