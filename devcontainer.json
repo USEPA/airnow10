@@ -1,7 +1,0 @@
-{
-  "forwardPorts": [8080],
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "features": {
-    "ghcr.io/ddev/ddev/install-ddev": "1.22.7" 
-  }
-}
