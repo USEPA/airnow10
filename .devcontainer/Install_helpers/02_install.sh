@@ -1,5 +1,5 @@
 ## After ssh key is set up and added to Pantheon, this script install the AirNow website ccw 2026-02-24
-cd /workspaces/airnow10
+cd /workspaces/airnow
 
 GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=accept-new' git clone ssh://codeserver.dev.837626a4-a2b8-4cf4-bf00-f3e776b805cd@codeserver.dev.837626a4-a2b8-4cf4-bf00-f3e776b805cd.drush.in:2222/~/repository.git -b master airnowgov10
 
