@@ -1,7 +1,7 @@
 ## After ssh key is set up and added to Pantheon, this script install the AirNow website ccw 2026-02-24
 cd /workspaces/airnow
 
-GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=accept-new' git clone ssh://codeserver.dev.2f3f964c-9dd4-4644-9cb9-5b2254a73c55@codeserver.dev.2f3f964c-9dd4-4644-9cb9-5b2254a73c55.drush.in:2222/~/repository.git -b master airnowgov9 
+GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=accept-new' git clone ssh://codeserver.dev.837626a4-a2b8-4cf4-bf00-f3e776b805cd@codeserver.dev.837626a4-a2b8-4cf4-bf00-f3e776b805cd.drush.in:2222/~/repository.git -b master airnowgov10
 
 sudo apt-get install ddev=1.22.7
 sudo apt-get update
