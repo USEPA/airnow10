@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get install ddev
 
 echo ''
-printf '\033[31m use Drupal9\033[0m\n'n
+printf '\033[31m We will use Drupal10\033[0m\n'n
 echo ''
 
 cd airnowgov10
