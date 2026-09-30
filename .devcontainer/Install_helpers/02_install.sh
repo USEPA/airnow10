@@ -3,27 +3,27 @@ cd /workspaces/airnow10
 
 GIT_SSH_COMMAND='ssh -o StrictHostKeyChecking=accept-new' git clone ssh://codeserver.dev.837626a4-a2b8-4cf4-bf00-f3e776b805cd@codeserver.dev.837626a4-a2b8-4cf4-bf00-f3e776b805cd.drush.in:2222/~/repository.git -b master airnowgov10
 
-sudo apt-get install ddev=1.23.0
 sudo apt-get update
+sudo apt-get install ddev
 
 echo ''
-printf '\033[31m use Drupal9\033[0m\n'
+printf '\033[31m use Drupal9\033[0m\n'n
 echo ''
 
 cd airnowgov10
 ddev config --project-name=airnowgov10 \
   --project-type=drupal10 \
-  --php-version=8.2 \
+  --php-version=8.2 
 
 ddev composer config audit.block-insecure false
-ddev composer require drush/drush:^11 --with-all-dependencies
+ddev composer require drush/drush:^12 --with-all-dependencies
 
 # Make some changes to the config.yaml file cw 2026-03-02
-sed -i 's/php_version: "8\.1"/php_version: "8.2"/' /workspaces/airnow/airnowgov10/.ddev/config.yaml
+sed -i 's/php_version: "8\.1"/php_version: "8.2"/' /workspaces/airnow10/airnowgov10/.ddev/config.yaml
 sed -i '/^web_environment: \[\]$/c\web_environment:\
     - TERMINUS_MACHINE_TOKEN=<your_token>\
     - PANTHEON_SITE=airnowgov10\
-    - PANTHEON_ENVIRONMENT=dev' /workspaces/airnow/airnowgov10/.ddev/config.yaml
+    - PANTHEON_ENVIRONMENT=dev' /workspaces/airnow10/airnowgov10/.ddev/config.yaml
 
 echo ''
 printf 'Now add your \033[31mPantheon\033[0m machine token to the \033[31m/airnowgov10/.ddev/config.yaml\033[0m file on Line 15\n'
