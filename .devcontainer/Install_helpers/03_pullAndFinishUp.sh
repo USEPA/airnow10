@@ -1,5 +1,5 @@
 ## After user token is updated, this script will finish setting up the AirNow website cw 2026-03-02
-cd /workspaces/airnow/airnowgov9
+cd /workspaces/airnow10/airnowgov10
 
 ddev start -y
 
