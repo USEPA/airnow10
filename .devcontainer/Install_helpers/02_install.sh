@@ -13,6 +13,7 @@ echo ''
 cd airnowgov10
 ddev config --project-name=airnowgov10 \
   --project-type=drupal10 \
+  --docroot=web \
   --php-version=8.2 
 
 ddev composer config audit.block-insecure false

@@ -1,6 +1,6 @@
 # bash
 ## Does the required SSH set-up to generate the SSH key for the Pantheon website cw 2026-02-24
-cd /workspaces/airnow
+cd /workspaces/airnow10
 ssh-keygen -t rsa -m PEM -f ~/.ssh/id_rsa -N ""
 echo ''
 cat ~/.ssh/id_rsa.pub
