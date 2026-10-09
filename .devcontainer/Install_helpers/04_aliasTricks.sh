@@ -3,23 +3,23 @@
 echo ''
 echo 'Adding some helpful aliases to your .bashrc file...'
 echo '' 
-echo 'alias an="cd /workspaces/airnow/airnowgov9"' >> ~/.bashrc
+echo 'alias an="cd /workspaces/airnow10/airnowgov10"' >> ~/.bashrc
 echo 'alias alert="notify-send --urgency=low -i \"$( [ $? = 0 ] && echo terminal || echo error )\" \"$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')\""' >> ~/.bashrc
 echo 'alias cfl="cf login -a api.fr.cloud.gov --sso"' >> ~/.bashrc
 echo 'alias cflc="cf login -a api.fr.cloud.gov --sso-passcode "' >> ~/.bashrc
-echo 'alias cy="cd /workspaces/airnow/airnowgov9; npx cypress run --config-file '\''cypress.config.js'\'' -b chrome --config baseUrl='\''https://www.airnow.gov'\'' "' >> ~/.bashrc
+echo 'alias cy="cd /workspaces/airnow10/airnowgov10; npx cypress run --config-file '\''cypress.config.js'\'' -b chrome --config baseUrl='\''https://www.airnow.gov'\'' "' >> ~/.bashrc
 echo 'alias editalias="nano ~/.bashrc"' >> ~/.bashrc
 echo 'alias egrep="egrep --color=auto"' >> ~/.bashrc        
 echo 'alias fgrep="fgrep --color=auto"' >> ~/.bashrc
 echo 'alias grep="grep --color=auto"' >> ~/.bashrc
-echo 'alias ka="cd /workspaces/airnow/airnowgov9/Helpers/keepAlive; ll; ./listDir.sh"' >> ~/.bashrc
+echo 'alias ka="cd /workspaces/airnow10/airnowgov10/Helpers/keepAlive; pwd; ll; printf '\''\033]0;keepAlive\007'\''; ./listDir.sh"' >> ~/.bashrc
 echo 'alias l="ls -CF"' >> ~/.bashrc
 echo 'alias la="ls -A"' >> ~/.bashrc
 echo 'alias ll="ls -alF"' >> ~/.bashrc
 echo 'alias ls="ls --color=auto"' >> ~/.bashrc
 echo 'alias rvm-restart="rvm_reload_flag=1 source '\''/usr/local/rvm/scripts/rvm'\''"' >> ~/.bashrc
 echo 'alias st="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -"' >> ~/.bashrc
-echo 'alias start="time /workspaces/airnow/airnowgov9/Helpers/startUp.sh"' >> ~/.bashrc
+echo 'alias start="time /workspaces/airnow10/airnowgov10/Helpers/startUp.sh"' >> ~/.bashrc
 echo 'alias wtr="curl wttr.in/Durham,NC?u"' >> ~/.bashrc
 echo 'alias wtrh="curl wttr.in/Hampton?u"' >> ~/.bashrc
 echo 'alias wtrnb="curl wttr.in/New+Bern?u"' >> ~/.bashrc   
@@ -27,7 +27,7 @@ echo ''
 echo 'Some helpful aliases have been added to your .bashrc file. You can edit them by running "editalias" or "nano ~/.bashrc".'
 echo ''
 echo 'Here are some of the aliases you can use:'
-echo '  an - Change directory to the airnowgov9 project'
+echo '  an - Change directory to the airnowgov10 project'
 echo '  alert - Send a desktop notification with the last command and its exit status'
 echo -e '\033[31m  cfl - Log in to Cloud Foundry with single sign-on\033[0m'
 echo '  cflc - Log in to Cloud Foundry with single sign-on and passcode'
