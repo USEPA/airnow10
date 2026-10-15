@@ -1,5 +1,5 @@
 {
-  "forwardPorts": [8080],
+  "forwardPorts": [80],
   "image": 
 "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
   "remoteUser": 
