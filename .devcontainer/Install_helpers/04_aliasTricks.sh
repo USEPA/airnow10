@@ -3,7 +3,7 @@
 echo ''
 echo 'Adding some helpful aliases to your .bashrc file...'
 echo '' 
-echo 'alias an="cd /workspaces/airnow10/airnowgov10"' >> ~/.bashrc
+echo 'alias an="cd /workspaces/airnow10/airnowgov10; pwd; start"' >> ~/.bashrc
 echo 'alias alert="notify-send --urgency=low -i \"$( [ $? = 0 ] && echo terminal || echo error )\" \"$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')\""' >> ~/.bashrc
 echo 'alias cfl="cf login -a api.fr.cloud.gov --sso"' >> ~/.bashrc
 echo 'alias cflc="cf login -a api.fr.cloud.gov --sso-passcode "' >> ~/.bashrc
