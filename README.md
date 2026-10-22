@@ -1,2 +1,2 @@
 # airnow10
-Core ddev container fro airnow in drupal 10
+Staring ddev container for AirNow in Drupal 10
