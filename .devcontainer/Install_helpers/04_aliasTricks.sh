@@ -7,7 +7,7 @@ echo 'alias an="cd /workspaces/airnow10/airnowgov10; pwd; start"' >> ~/.bashrc
 echo 'alias alert="notify-send --urgency=low -i \"$( [ $? = 0 ] && echo terminal || echo error )\" \"$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')\""' >> ~/.bashrc
 echo 'alias cfl="cf login -a api.fr.cloud.gov --sso"' >> ~/.bashrc
 echo 'alias cflc="cf login -a api.fr.cloud.gov --sso-passcode "' >> ~/.bashrc
-echo 'alias cy="cd /workspaces/airnow10/airnowgov10; npx cypress run --config-file '\''cypress.config.js'\'' -b chrome --config baseUrl='\''https://www.airnow.gov'\'' "' >> ~/.bashrc
+echo 'alias cy="cd /workspaces/airnow10/airnowgov10; npx cypress run --config-file '\''cypress.config.js'\'' -b chrome --quiet --config baseUrl='\''https://www.airnow.gov'\'' "' >> ~/.bashrc
 echo 'alias editalias="nano ~/.bashrc"' >> ~/.bashrc
 echo 'alias egrep="egrep --color=auto"' >> ~/.bashrc        
 echo 'alias fgrep="fgrep --color=auto"' >> ~/.bashrc
