@@ -1,0 +1,51 @@
+/* updated 1.29.2025 */
+/* FID 864 */
+/* https://www.airnow.gov/mp/custom_CSS/mpCSS.css */
+
+
+/* 3080 | 1.6.2025 */
+@media only screen and (min-width:1200px){
+	#block-customfooterblock > div > div{
+	  width: 1240px;
+	}
+	#nav-geosearch-tool .curr-cond-label{
+	  margin-right: 24px;
+	}
+	#block-customfooterblock > div > div > div > div.col-sm-5{
+	  width: 47%;
+	}
+	#block-customfooterblock > div > div > div > div.col-sm-3{
+	  width: 28%;
+	}
+	#block-customfooterblock > div > div > div > div.col-sm-4.social-media-holders{
+	  max-width: 25%;
+	}
+	}
+	
+	/* 3081 | 1.7.2025 */
+	#block-customnavigationblock .dropbtn{
+	  padding: 14px;
+	}
+	
+	/* 3084 | 1.7.2025 */ 
+	.main-content .po-aqi-scale .po-title-text{
+	  white-space: normal;
+	}
+	.main-content .po-aqi-scale .po-aqi-scale-display .display-item{
+	  padding: 0px 4px;
+	}
+	.main-content .po-aqi-scale .po-aqi-scale-btn{
+	  width: 155px;
+	  top: 155px;
+	}
+	.main-content .po-aqi-scale > div.fa.fa-chevron-circle-down{
+	  top: 55px !important;
+	  left: -39px !important;
+	}
+
+/* 00023896 | 1.29.2025 */
+@media only screen and (min-width:1200px){
+	.aq-dial .top-half{
+	  padding: 0 12px;
+	}
+  }

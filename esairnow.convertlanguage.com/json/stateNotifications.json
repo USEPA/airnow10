@@ -1,0 +1,6 @@
+[ 
+{"state": "CA", "notification": {"type": "Incendios", "alertnode": "4801"}},
+{"state": "MI", "notification": {"type": "Incendios", "alertnode": "4801"}},
+{"state": "OR", "notification": {"type": "Incendios", "alertnode": "4801"}},
+{"state": "WA", "notification": {"type": "Incendios", "alertnode": "4801"}}
+]

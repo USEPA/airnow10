@@ -1,4 +1,5 @@
 # airnow10
+<<<<<<< HEAD
 Core ddev container fro airnow in drupal 10
 
 ## Static sandbox assets
@@ -36,3 +37,6 @@ is explicit because `airnowjson` may not be available when the container is
 created. GeoPandas is already included in the requirements; a
 `ModuleNotFoundError: No module named 'geopandas'` indicates those requirements
 have not been installed for the interpreter running the script.
+=======
+Staring ddev container for AirNow in Drupal 10
+>>>>>>> 75d0ff3ab1678961b35e62748b264bd0f109307d

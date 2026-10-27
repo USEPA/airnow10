@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Cypress: local AirNow",
+			"type": "shell",
+			"command": "cd /workspaces/airnow10/airnowgov10 && npx cypress run --config-file cypress.config.js --browser chrome --headless --config baseUrl=http://127.0.0.1",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "test"
+		}
+	]
+}

@@ -1,0 +1,40 @@
+{
+  "Hello World": "¡Hola Mundo!",
+  "Good": "Bueno",
+  "Moderate": "Moderado",
+  "Unhealthy for Sensitive Groups": "Insalubre para Grupos Sensibles",
+  "Unhealthy": "Insalubre",
+  "Very Unhealthy": "Muy Insalubre",
+  "Hazardous": "Peligroso",
+  "welcome_message": "Bienvenido a AirNow.",
+  "Not Available": "No Disponible",
+
+  "Today": "Hoy",
+  "Tomorrow": "Mañana",
+  "Forecast AQI": "Pronóstico del AQI",
+
+  "OZONE": "OZONO",
+
+  "TEMP": "TEMP",
+  "VISIBILITY": "VISIBILIDAD",
+  "WIND": "VIENTO",
+  "HUMIDITY": "HUMEDAD",
+  "CONDITIONS": "CONDICIONES",
+  "CLOUDINESS": "NUBOSIDAD",
+
+  "Day": "Día",
+  "Week": "Semana",
+  "Month": "Mes",
+  "DAY": "DÍA",
+  "WEEK": "SEMANA",
+  "MONTH": "MES", 
+
+  "Today's Air Quality": "Calidad del Aire de Hoy",
+  "Tomorrow's Air Quality": "Calidad del Aire de Mañana",
+  "Forecast": "Pronóstico",
+  "Today's Forecast": "Pronóstico de Hoy",
+  "Tomorrow's Forecast": "Pronóstico de Mañana",
+  "Air Quality Index": "Índice de Calidad del Aire",
+  "Activity Guidance": "Guía de Actividades",
+  "Current Air Quality": "Calidad del Aire Actual"
+}
