@@ -1,2 +1,5 @@
-# Ignore widget sirectory
+# Ignore things that should not be in "airnow10" CodeSpace repository
+
+# Ignore widget directory
+widget/
 
