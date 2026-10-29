@@ -1,5 +1,14 @@
 # Ignore things that should not be in "airnow10" CodeSpace repository
 
-# Ignore widget directory
+# Ignore widget directory and Widget,naqc, esairnow.convertlanguage.com, document, airnowtomed,airnowjson,airnowgov10, airnowfire4,airnowfiremobile
 widget/
+Widget/
+naqc/
+esairnow.convertlanguage.com/
+document/
+airnowtomed/
+airnowjson/
+airnowgov10/
+airnowfire4/
+airnowfiremobile/
 
