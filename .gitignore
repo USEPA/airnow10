@@ -2,7 +2,6 @@
 
 # Ignore widget directory and Widget,naqc, esairnow.convertlanguage.com, document, airnowtomed,airnowjson,airnowgov10, airnowfire4,airnowfiremobile
 widget/
-Widget/
 naqc/
 esairnow.convertlanguage.com/
 document/
@@ -11,4 +10,3 @@ airnowjson/
 airnowgov10/
 airnowfire4/
 airnowfiremobile/
-
