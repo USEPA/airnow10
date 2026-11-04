@@ -34,7 +34,8 @@ cylast() (
     printf 'No Cypress specs found in cypress/_Current_specs/.\n' >&2
     return 1
   fi
-  npx cypress run --config-file cypress.config.js --spec "$latest" -b chrome --quiet --config "baseUrl=$base_url"
+  FORCE_COLOR=1 npx cypress run --config-file cypress.config.js --spec "cypress/_Critical_specs/AirNow Content and Version.cy.js" -b chrome --quiet --config "baseUrl=$base_url" 2> >(sed '/^DevTools listening on ws:\/\//d' >&2)
+  FORCE_COLOR=1 npx cypress run --config-file cypress.config.js --spec "$latest" -b chrome --quiet --config "baseUrl=$base_url" 2> >(sed '/^DevTools listening on ws:\/\//d' >&2)
 )
 alias cy30='while true; do printf "\n=== Cypress run started: "; date -Is; cd /workspaces/airnow10/airnowgov10 && npx cypress run --config-file cypress.config.js -b chrome --quiet --config baseUrl=https://www.airnow.gov; status=$?; printf "=== Cypress run finished (exit %s): " "$status"; date -Is; sleep 1800; done'
 EOF
