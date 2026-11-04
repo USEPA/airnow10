@@ -8,6 +8,24 @@ echo 'alias alert="notify-send --urgency=low -i \"$( [ $? = 0 ] && echo terminal
 echo 'alias cfl="cf login -a api.fr.cloud.gov --sso"' >> ~/.bashrc
 echo 'alias cflc="cf login -a api.fr.cloud.gov --sso-passcode "' >> ~/.bashrc
 echo 'alias cy="cd /workspaces/airnow10/airnowgov10; npx cypress run --config-file '\''cypress.config.js'\'' -b chrome --quiet --config baseUrl='\''https://www.airnow.gov'\'' "' >> ~/.bashrc
+cat <<'EOF' >> ~/.bashrc
+cylast() (
+  cd /workspaces/airnow10/airnowgov10 || return
+  local spec latest=""
+  for spec in cypress/_Current_specs/*.cy.js; do
+    [ -f "$spec" ] || continue
+    if [ -z "$latest" ] || [ "$spec" -nt "$latest" ]; then
+      latest="$spec"
+    fi
+  done
+  if [ -z "$latest" ]; then
+    printf 'No Cypress specs found in cypress/_Current_specs/.\n' >&2
+    return 1
+  fi
+  npx cypress run --config-file cypress.config.js --spec "$latest" -b chrome --quiet --config baseUrl=https://www.airnow.gov
+)
+alias cy30='while true; do printf "\n=== Cypress run started: "; date -Is; cd /workspaces/airnow10/airnowgov10 && npx cypress run --config-file cypress.config.js -b chrome --quiet --config baseUrl=https://www.airnow.gov; status=$?; printf "=== Cypress run finished (exit %s): " "$status"; date -Is; sleep 1800; done'
+EOF
 echo 'alias editalias="nano ~/.bashrc"' >> ~/.bashrc
 echo 'alias egrep="egrep --color=auto"' >> ~/.bashrc        
 echo 'alias fgrep="fgrep --color=auto"' >> ~/.bashrc
@@ -32,6 +50,8 @@ echo '  alert - Send a desktop notification with the last command and its exit s
 echo -e '\033[31m  cfl - Log in to Cloud Foundry with single sign-on\033[0m'
 echo '  cflc - Log in to Cloud Foundry with single sign-on and passcode'
 echo '  cy - Run Cypress tests for the AirNow website'
+echo '  cylast - Run the most recently modified Cypress spec in cypress/_Current_specs/'
+echo '  cy30 - Run Cypress tests repeatedly, waiting 30 minutes after each run; stop with Ctrl+C'
 echo '  editalias - Edit the .bashrc file to add or modify aliases'
 echo '  egrep - Search for patterns in files with color highlighting'
 echo '  fgrep - Search for fixed strings in files with color highlighting'
