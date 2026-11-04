@@ -11,7 +11,19 @@ echo 'alias cy="cd /workspaces/airnow10/airnowgov10; npx cypress run --config-fi
 cat <<'EOF' >> ~/.bashrc
 cylast() (
   cd /workspaces/airnow10/airnowgov10 || return
-  local spec latest=""
+  local spec latest="" base_url="${1:-https://www.airnow.gov}"
+  case "$base_url" in
+    127|127.0.0.1|127.0.0.1:*|http://127.0.0.1|http://127.0.0.1:*|https://127.0.0.1|https://127.0.0.1:*)
+      base_url="http://127.0.0.1:8080" ;;
+    http://*|https://*) ;;
+    *.*) base_url="https://$base_url" ;;
+    *)
+      if [[ "$base_url" == *[!a-zA-Z0-9-]* || "$base_url" == -* || "$base_url" == *- ]]; then
+        printf 'Invalid preview app name: %s\n' "$base_url" >&2
+        return 1
+      fi
+      base_url="https://preview:Welcome1@${base_url}.app.cloud.gov" ;;
+  esac
   for spec in cypress/_Current_specs/*.cy.js; do
     [ -f "$spec" ] || continue
     if [ -z "$latest" ] || [ "$spec" -nt "$latest" ]; then
@@ -22,7 +34,7 @@ cylast() (
     printf 'No Cypress specs found in cypress/_Current_specs/.\n' >&2
     return 1
   fi
-  npx cypress run --config-file cypress.config.js --spec "$latest" -b chrome --quiet --config baseUrl=https://www.airnow.gov
+  npx cypress run --config-file cypress.config.js --spec "$latest" -b chrome --quiet --config "baseUrl=$base_url"
 )
 alias cy30='while true; do printf "\n=== Cypress run started: "; date -Is; cd /workspaces/airnow10/airnowgov10 && npx cypress run --config-file cypress.config.js -b chrome --quiet --config baseUrl=https://www.airnow.gov; status=$?; printf "=== Cypress run finished (exit %s): " "$status"; date -Is; sleep 1800; done'
 EOF
@@ -50,7 +62,8 @@ echo '  alert - Send a desktop notification with the last command and its exit s
 echo -e '\033[31m  cfl - Log in to Cloud Foundry with single sign-on\033[0m'
 echo '  cflc - Log in to Cloud Foundry with single sign-on and passcode'
 echo '  cy - Run Cypress tests for the AirNow website'
-echo '  cylast - Run the most recently modified Cypress spec in cypress/_Current_specs/'
+echo '  cylast [URL|app|127] - Run the newest Cypress spec; defaults to https://www.airnow.gov'
+echo '    app uses HTTPS at app.app.cloud.gov with preview:Welcome1 AUTH; 127 uses http://127.0.0.1:8080'
 echo '  cy30 - Run Cypress tests repeatedly, waiting 30 minutes after each run; stop with Ctrl+C'
 echo '  editalias - Edit the .bashrc file to add or modify aliases'
 echo '  egrep - Search for patterns in files with color highlighting'
