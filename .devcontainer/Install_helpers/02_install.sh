@@ -30,7 +30,7 @@ echo ''
 code /workspaces/airnow10/airnowgov10/.ddev/config.yaml
 
 echo ''
-echo 'Come back here and run this:'
+echo 'Come back here and run this command... This next one is the \033[31mBIG\033[0m one:'
 echo ''
 echo 'bash 03_pullAndFinishUp.sh'
 echo ''
