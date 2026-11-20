@@ -3,7 +3,7 @@ cd /workspaces/airnow10/airnowgov10
 
 ddev start -y
 
-ddev pull pantheon -y
+#ddev pull pantheon -y
 ddev drush cr
 ddev composer require drush/drush:^11 --with-all-dependencies
 ddev drush cr
@@ -58,4 +58,9 @@ echo ''
 ddev drush cr
 echo ''
 echo '  Are we getting a clean cache rebuild?'
+echo ''
+
+echo 'Now run this:'
+echo ''
+echo 'bash 04_alias_tricks.sh'
 echo ''

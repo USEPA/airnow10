@@ -84,3 +84,4 @@ echo '  wtrnb - Get the weather for New Bern from wttr.in'
 echo ''
 echo -e 'You can use these aliases to save time and make your workflow more efficient after you \033[31mstart a new terminal session\033[0m.'
 echo ''
+figlet "Done."

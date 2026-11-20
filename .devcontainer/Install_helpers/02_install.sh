@@ -17,7 +17,7 @@ ddev config --project-name=airnowgov10 \
   --php-version=8.2 
 
 ddev composer config audit.block-insecure false
-ddev composer require drush/drush:^12 --with-all-dependencies
+ddev composer install
 
 # Make some changes to the config.yaml file cw 2026-03-02
 sed -i 's/php_version: "8\.1"/php_version: "8.2"/' /workspaces/airnow10/airnowgov10/.ddev/config.yaml
@@ -31,3 +31,9 @@ printf 'Now add your \033[31mPantheon\033[0m machine token to the \033[31m/airno
 echo ''
 
 code /workspaces/airnow10/airnowgov10/.ddev/config.yaml
+
+echo ''
+echo 'Come back here an run this:'
+echo ''
+echo 'bash 03_pullAndFinishUp.sh'
+echo ''
