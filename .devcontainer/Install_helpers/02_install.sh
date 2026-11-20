@@ -14,7 +14,8 @@ cd airnowgov10
 ddev config --project-name=airnowgov10 \
   --project-type=drupal10 \
   --docroot=web \
-  --php-version=8.2
+  --php-version=8.2 \
+  --host-webserver-port=8080
 
 # Make some changes to the config.yaml file cw 2026-03-02
 sed -i 's/php_version: "8\.1"/php_version: "8.2"/' /workspaces/airnow10/airnowgov10/.ddev/config.yaml
@@ -30,7 +31,8 @@ echo ''
 code /workspaces/airnow10/airnowgov10/.ddev/config.yaml
 
 echo ''
-echo 'Come back here and run this command... This next one is the \033[31mBIG\033[0m one:'
+printf 'Come back here and run this command... This next one is the \033[31mBIG\033[0m one:'
+echo ''
 echo ''
 echo 'bash 03_pullAndFinishUp.sh'
 echo ''

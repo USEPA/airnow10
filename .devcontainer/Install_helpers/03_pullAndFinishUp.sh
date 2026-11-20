@@ -62,5 +62,5 @@ echo ''
 
 echo 'Now run this:'
 echo ''
-echo 'bash 04_alias_tricks.sh'
+echo 'bash 04_aliasTricks.sh'
 echo ''
