@@ -16,19 +16,12 @@ ddev config --project-name=airnowgov10 \
   --docroot=web \
   --php-version=8.2
 
-ddev composer config audit.block-insecure false
-ddev composer install
-
 # Make some changes to the config.yaml file cw 2026-03-02
 sed -i 's/php_version: "8\.1"/php_version: "8.2"/' /workspaces/airnow10/airnowgov10/.ddev/config.yaml
 sed -i '/^web_environment: \[\]$/c\web_environment:\
     - TERMINUS_MACHINE_TOKEN=<your_token>\
     -  DDEV_PANTHEON_SITE=airnowgov10\
     -  DDEV_PANTHEON_ENVIRONMENT=dev' /workspaces/airnow10/airnowgov10/.ddev/config.yaml
-
-
-# Force port 8080 for the host webserver
-sed -i 's/host_webserver_port: ".*"/host_webserver_port: "8080"/' /workspaces/airnow10/airnowgov10/.ddev/config.yaml
 
 echo ''
 printf 'Now add your \033[31mPantheon\033[0m machine token to the \033[31m/airnowgov10/.ddev/config.yaml\033[0m file on Line 15\n'
