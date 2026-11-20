@@ -5,8 +5,6 @@ ddev start -y
 
 ddev pull pantheon -y
 ddev drush cr
-ddev composer require drush/drush:^11 --with-all-dependencies
-ddev drush cr
 
 ## Extra stuff
 cd Helpers
