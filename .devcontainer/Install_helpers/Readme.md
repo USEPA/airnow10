@@ -2,7 +2,7 @@
 ## Respond with the defalut (or Enter key) to the prompts.
 
 0) Install VS Code and the "Remote Explorer" plugin; Sign-in to USEPA Enterprise GitHub
-1) Create a new codespace using the Master branch of USEPA/airnow10
+1) Create a new codespace using USEPA/airnow10 (Master branch)
 2) Find the Power User Scripts in the .devcontainer/Install_helpers/ directory
 3) Run bash 01_sshSetUp.sh
 4) Paste the key into the Pantheon dashboard at "Personal Settings >> SSH Keys >> Add New Key >> Your Key" box
