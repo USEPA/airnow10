@@ -15,7 +15,7 @@ echo -e "\033[31mCopy the following SSH key and add it to your Pantheon account:
 echo ''
 cat ~/.ssh/id_rsa.pub
 echo ''
-echo 'Come back here an run this:'
+echo 'Come back here and run this:'
 echo ''
 echo 'bash 02_install.sh'
 echo ''
