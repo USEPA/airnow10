@@ -49,6 +49,7 @@ sudo apt --fix-broken install
 sudo apt-get install trash-cli
 sudo apt-get update
 
+## Verify drush cache rebuild
 ddev drush cr
 echo ''
 echo '   Did it work?'

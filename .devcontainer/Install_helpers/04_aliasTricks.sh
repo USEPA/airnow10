@@ -1,5 +1,19 @@
-## This script install some helpful aliases for the AirNow project cw 2026-03-04
+## Cypress Needs to be at version 16 cw 2026-11-23
+cd /workspaces/airnow10/airnowgov10
 
+# 1. Upgrade the package (needs ≥16.3.0 for the Chrome 158 fix)
+npm install --save-dev cypress@latest
+
+# 2. Confirm the version and that the binary works
+npx cypress version      # should show 16.3.0 or newer
+npx cypress verify
+figlet "Cypress $(npx cypress version --component package)"
+
+# 3. Smoke-test with two+ specs (the bug only hit on the 2nd spec)
+npx cypress run --browser chrome --spec "cypress/_Critical_specs/*Critical*.cy.js"
+
+
+## This will install some helpful aliases for the AirNow project cw 2026-03-04
 echo ''
 echo 'Adding some helpful aliases to your .bashrc file...'
 echo '' 
