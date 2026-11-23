@@ -16,6 +16,7 @@ ddev config --project-name=airnowgov10 \
   --docroot=web \
   --php-version=8.2 \
   --host-webserver-port=8080
+ddev start
 
 # Make some changes to the config.yaml file cw 2026-03-02
 sed -i 's/php_version: "8\.1"/php_version: "8.2"/' /workspaces/airnow10/airnowgov10/.ddev/config.yaml
