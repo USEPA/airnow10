@@ -98,4 +98,7 @@ echo '  wtrnb - Get the weather for New Bern from wttr.in'
 echo ''
 echo -e 'You can use these aliases to save time and make your workflow more efficient after you \033[31mstart a new terminal session\033[0m.'
 echo ''
+### Drush command to update the marquee_data_module for AIR-822 cw 2026-11-25
+ddev drush config:import --partial --source=/var/www/html/web/modules/custom/maruqee_data_module/config/install --yes
+#
 figlet "Done."
